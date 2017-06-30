@@ -1,10 +1,15 @@
 ##Motivation
 
-When you create React project and use Webpack as module bundler, you can face with an issue. Different project routes pack to the same file. Using webpack bundle-loader doesn't solve this issue.
+When you create React project and use Webpack as module bundler, you can face with an issue that different project routes pack to the same file. Using webpack bundle-loader doesn't solve this issue.
 
 ##What is this?
 
 Module extend React Route and create abbility to load bundles only when route should be rendered. 
+
+## Module install
+
+`npm -i react-bundle-router`\
+`yarn add react-bundle-router`
 
 ##How to use
 
@@ -14,7 +19,7 @@ Setup webpack config, to create bundles (https://github.com/webpack-contrib/bund
 
 Instead of using `Route (react-router)` component import 'react-bundle-router'
 
-```
+```javascript
 // index.jsx
 
 import React from 'react';
@@ -35,10 +40,13 @@ export default class Root extends React.Component {
     }
 }
 ```
+BundleRoute should be declared with `file` property. This is string property that should contain component filename. This file will be loaded when `path` will be match to `location.pathname`
+
+##Module setup
 
 You should specify Route Loader function
 
-```
+```javascript
 import {defineLoader} from  'react-bundle-router'
 
 defineLoader((name, cb) => {
@@ -47,4 +55,4 @@ defineLoader((name, cb) => {
 
 ```
 
-Copy-paste loader above to your project with updated path. !Important. Do not change `require` argument format. It should be string(path) + variable(filename) + string(ext). 
+Copy-paste loader above to your project with updated path. **Important**: Do not change `require` argument format. It should be **string(path) + variable(filename) + string(ext)**. 
