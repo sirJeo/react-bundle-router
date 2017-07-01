@@ -59,4 +59,4 @@ Copy-paste loader above to your project with updated path. **Important**: Do not
 
 ##Example of usage
 
-https://github.com/sirJeo/react-bundle-router/example
+https://github.com/sirJeo/react-bundle-router/tree/master/example
