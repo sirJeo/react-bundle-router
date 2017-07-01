@@ -1,6 +1,6 @@
 {
   "name": "react-bundle-router",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Split React Routes by bundles with webpack, you can load bundle scripts on demand.",
   "main": "index.js",
   "scripts": {

@@ -56,3 +56,7 @@ defineLoader((name, cb) => {
 ```
 
 Copy-paste loader above to your project with updated path. **Important**: Do not change `require` argument format. It should be **string(path) + variable(filename) + string(ext)**. 
+
+##Example of usage
+
+https://github.com/sirJeo/react-bundle-router/example
